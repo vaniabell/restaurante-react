@@ -20,6 +20,7 @@ function Home() {
         <Background/>
   
       </header>
+      <p>HOLA </p>
       
     </>
   );

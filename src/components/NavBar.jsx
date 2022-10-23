@@ -15,7 +15,7 @@ function NavBar() {
               <Link className="w3-button w3-block w3-black"to="/menu">MENU</Link>
             </div>
             <div className="w3-col s3">
-              <Link className="w3-button w3-block w3-black" to="/where">WHERE</Link>
+              <Link className="w3-button w3-block w3-black" to="/where">RESERVATIONS</Link>
             </div>
           </div>
         </div>
