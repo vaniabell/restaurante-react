@@ -1,3 +1,4 @@
+import FrontView from './img/FrontView.jpg';
 function About() {
     return ( 
         <>
@@ -11,7 +12,7 @@ function About() {
                 <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
                 <p>Chef, Coffeeist and Owner: Liam Brown</p>
               </div>
-              <img src="/w3images/coffeeshop.jpg" style={{ width: '100%', maxWidth: 1000 }} className="w3-margin-top" />
+              <img src={FrontView} style={{ width: '100%', maxWidth: 1000 }} className="w3-margin-top" />
               <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
               <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
             </div>
