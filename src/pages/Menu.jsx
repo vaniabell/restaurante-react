@@ -1,16 +1,38 @@
+import { useEffect } from "react";
+
 function Menu() {
-    return (    
+    useEffect(() =>{
+        document.getElementById("myLink").click();
+
+    },[]);
     
-           <>
-              {/* Menu Container */}
-              <div className="w3-container" id="menu">
+    function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+
+
+    return (
+        <>
+
+             {/* Menu Container */}
+             <div className="w3-container" id="menu">
                 <div className="w3-content" style={{ maxWidth: 700 }}>
                     <h5 className="w3-center w3-padding-48"><span className="w3-tag w3-wide">THE MENU</span></h5>
                     <div className="w3-row w3-center w3-card w3-padding">
-                        <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                        <a href="javascript:void(0)" onClick="openMenu(event, 'Eat');" id="myLink">
                             <div className="w3-col s6 tablink">Eat</div>
                         </a>
-                        <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                        <a href="javascript:void(0)" onClick="openMenu(event, 'Drinks');">
                             <div className="w3-col s6 tablink">Drink</div>
                         </a>
                     </div>
@@ -42,14 +64,10 @@ function Menu() {
                 </div>
             </div>
             
-
            </>
-         
 
 
-
-        
-            );
+    );
 }
 
-            export default Menu;
+export default Menu;
