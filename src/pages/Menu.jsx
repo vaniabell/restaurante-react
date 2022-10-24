@@ -19,7 +19,9 @@ function Menu() {
         document.getElementById(menuName).style.display = "block";
         evt.currentTarget.firstElementChild.className += " w3-dark-grey";
     }
+    
 
+    
 
     return (
         <>
@@ -29,10 +31,10 @@ function Menu() {
                 <div className="w3-content" style={{ maxWidth: 700 }}>
                     <h5 className="w3-center w3-padding-48"><span className="w3-tag w3-wide">THE MENU</span></h5>
                     <div className="w3-row w3-center w3-card w3-padding">
-                        <a href="javascript:void(0)" onClick="openMenu(event, 'Eat');" id="myLink">
+                        <a href="javascript:void(0)" onClick={(evt) => openMenu(evt, 'Eat')} id="myLink">
                             <div className="w3-col s6 tablink">Eat</div>
                         </a>
-                        <a href="javascript:void(0)" onClick="openMenu(event, 'Drinks');">
+                        <a href="javascript:void(0)" onClick={(evt) => openMenu(evt, 'Drinks')}>
                             <div className="w3-col s6 tablink">Drink</div>
                         </a>
                     </div>
