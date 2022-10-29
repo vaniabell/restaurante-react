@@ -1,4 +1,5 @@
-import Background from './Background'
+import Background from './Background';
+import NameProps from './img/NameProps';
 function Home() {
   return (
     <>
@@ -12,7 +13,7 @@ function Home() {
           <span className="w3-tag">Open from 8am to 10pm</span>
         </div>
         <div className="w3-display-middle w3-center">
-          <span className="w3-text-black" style={{ fontSize: 90 }}>THE<br />LIMBO</span>
+          <NameProps className="w3-text-black" style={{ fontSize: 90 }} name="THE LIMBO"></NameProps>
         </div>
         <div className="w3-display-bottomright w3-center w3-padding-large">
           <span className="w3-tag">15 Adr street, 5015</span>

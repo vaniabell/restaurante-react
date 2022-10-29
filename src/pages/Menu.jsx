@@ -29,7 +29,7 @@ function Menu() {
              {/* Menu Container */}
              <div className="w3-container" id="menu">
                 <div className="w3-content" style={{ maxWidth: 700 }}>
-                    <h5 className="w3-center w3-padding-48"><span className="w3-tag w3-wide">THE MENU</span></h5>
+                    <h5 className="w3-center w3-padding-64"><span className="w3-tag w3-wide">THE MENU</span></h5>
                     <div className="w3-row w3-center w3-card w3-padding">
                         <a href="javascript:void(0)" onClick={(evt) => openMenu(evt, 'Eat')} id="myLink">
                             <div className="w3-col s6 tablink">Eat</div>
