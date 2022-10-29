@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 function NameProps(props) {
-    return ( <h1>{props.name}</h1>
+    return ( <h1 style={{ fontSize: 99 }}>{props.name}</h1>
         
      );
 }

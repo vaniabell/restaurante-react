@@ -1,9 +1,11 @@
 function Reservations() {
     return (  
         <>
-         <div className="w3-container" id="where" style={{ paddingBottom: 32 }}> 
-         <form action="/action_page.php" target="_blank">
+         <div className="w3-container w3-padding-64" id="where" style={{ paddingBottom: 32 }}> 
+         <form >
             <p><input className="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name" /></p>
+            <p><input className="w3-input w3-padding-16 w3-border" type="tel" placeholder="Phone" required name="phone" /></p>
+            <p><input className="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="email" /></p>
             <p><input className="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People" /></p>
             <p><input className="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" defaultValue="2020-11-16T20:00" /></p>
             <p><input className="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message" /></p>
@@ -12,24 +14,23 @@ function Reservations() {
           <div class="w3-container"> 
       <table class="w3-table w3-striped w3-bordered">
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Points</th>
+            <th>Name</th>
+            <th> # People</th>
+            <th>Date </th>
+            <th>Time</th>
           </tr>
           <tr>
             <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
+            
+           
           </tr>
           <tr>
             <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
+            
           </tr>
           <tr>
             <td>Adam</td>
-            <td>Johnson</td>
-            <td>67</td>
+          
           </tr>
         </table>
       </div>
