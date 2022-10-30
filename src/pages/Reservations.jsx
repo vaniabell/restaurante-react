@@ -7,7 +7,7 @@ function Reservations() {
   const getData = async () => {
     const snapshot = await getDocs(collection(db, "clientes"));
     console.log(snapshot.docs.map(doc => doc.data()));
-    setDatos();
+    setDatos(snapshot.docs.map(doc => doc.data()));
 
   };
   useEffect(() => {
@@ -15,8 +15,8 @@ function Reservations() {
   }, []);
   return (
     <>
-    <code>{JSON.stringify(datos)}</code>
-      <div className="w3-container w3-padding-64" id="where" style={{ paddingBottom: 32 }}>
+    
+      <div className="w3-container w3-padding-64" id="where" style={{ paddingBottom: 100 }}>
 
         <div className="w3-container">
           <table className="w3-table w3-striped w3-bordered">
@@ -26,17 +26,25 @@ function Reservations() {
                 <th> # People</th>
                 <th>Date </th>
                 <th>Time</th>
+                <th>message</th>
               </tr>
 
             </thead>
             <tbody>
   
-                    <tr>
-                    <th>k</th>
-                    <th>k</th>
-                    <th>k</th>
-                    <th>k</th>
+                  {
+                    datos.map((cliente,index)=>{
+                      return(
+                        <tr key={index}>
+                    <th>{cliente.name}</th>
+                    <th>{cliente.people}</th>
+                    <th>{cliente.date}</th>
+                    <th>{cliente.time}</th>
+                    <th>{cliente.message}</th>
                   </tr>
+                      )
+                    })
+                  }
 
 
             </tbody>
