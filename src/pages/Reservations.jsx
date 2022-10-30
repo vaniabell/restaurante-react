@@ -1,13 +1,20 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection,onSnapshot } from "firebase/firestore";
 import { db } from '../firebase';
 import { useState, useEffect } from "react";
 
 function Reservations() {
   const [datos, setDatos] = useState([]);
   const getData = async () => {
-    const snapshot = await getDocs(collection(db, "clientes"));
-    console.log(snapshot.docs.map(doc => doc.data()));
-    setDatos(snapshot.docs.map(doc => doc.data()));
+    //const snapshot = await onSnapshot(collection(db, "clientes"));
+    //console.log(snapshot.docs.map(doc => doc.data()));
+    //setDatos(snapshot.docs.map(doc => doc.data()));
+    onSnapshot(collection(db,"clientes"), (querySnapshot) => {
+      setDatos(querySnapshot.docs.map(doc =>{
+        return {...doc.data()}
+      }));
+
+      });
+    
 
   };
   useEffect(() => {
