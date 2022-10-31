@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Menu() {
     useEffect(() =>{
@@ -31,12 +32,12 @@ function Menu() {
                 <div className="w3-content" style={{ maxWidth: 700 }}>
                     <h5 className="w3-center w3-padding-64"><span className="w3-tag w3-wide">THE MENU</span></h5>
                     <div className="w3-row w3-center w3-card w3-padding">
-                        <a href="javascript:void(0)" onClick={(evt) => openMenu(evt, 'Eat')} id="myLink">
+                        <Link onClick={(evt) => openMenu(evt, 'Eat')} id="myLink">
                             <div className="w3-col s6 tablink">Eat</div>
-                        </a>
-                        <a href="javascript:void(0)" onClick={(evt) => openMenu(evt, 'Drinks')}>
+                        </Link>
+                        <Link  onClick={(evt) => openMenu(evt, 'Drinks')}>
                             <div className="w3-col s6 tablink">Drink</div>
-                        </a>
+                        </Link>
                     </div>
                     <div id="Eat" className="w3-container menu w3-padding-48 w3-card">
                         <h5>Bread Basket</h5>
@@ -62,7 +63,7 @@ function Menu() {
                         <h5>Soda</h5>
                         <p className="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
                     </div>
-                    <img src="/w3images/coffeehouse2.jpg" style={{ width: '100%', maxWidth: 1000, marginTop: 32 }} />
+                    
                 </div>
             </div>
             
