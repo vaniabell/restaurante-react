@@ -3,6 +3,7 @@ import { db } from '../firebase';
 import { addDoc,collection} from 'firebase/firestore';
 import Captura from './img/Captura.PNG';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 function Where() {
   const [formulario, setFormulario] = useState({
     name:'',
@@ -13,7 +14,7 @@ function Where() {
     message:'',
 
   });
-
+const navigate =useNavigate();
   const handleInputChange =(event) =>{
     setFormulario({
       ...formulario,
@@ -30,8 +31,9 @@ function Where() {
       'Reservation Done',
       'success'
     ).then(()=>{
-      window.location.href="/reservations";
+      navigate("/reservations");
 
+      
     });
    
   };
